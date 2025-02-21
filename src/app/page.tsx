@@ -36,7 +36,7 @@ export default function Home() {
 
     try {
       const response = await axios.post<OCRResponse>(
-        'http://localhost:3002/ocr',
+        `${process.env.NEXT_PUBLIC_BACKEND_API}/ocr`,
         formData,
         {
           headers: {
